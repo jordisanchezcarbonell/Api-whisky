@@ -1,0 +1,148 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>API</title>
+</head>
+<body>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<div class="container">
+    <h1 style="
+    text-align: center;
+    margin: 50px;
+" >API</h1>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        GET
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    /api/whisky/all
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        GET by id
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    /api/whisky/{ID}
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        ADD ELEMENT
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    api/whisky/addWhisky                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingcuatro">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsecuatro" aria-expanded="false" aria-controls="collapsecuatro">
+                        >ADD LIST ELEMENT
+                    </button>
+                </h5>
+            </div>
+            <div id="collapsecuatro" class="collapse" aria-labelledby="headingcuatro" data-parent="#accordion">
+                <div class="card-body">
+                    api/whisky/addWhisky                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingcinco">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsecinco" aria-expanded="false" aria-controls="collapsecinco">
+                        >UpdateT
+                    </button>
+                </h5>
+            </div>
+            <div id="collapsecinco" class="collapse" aria-labelledby="headingcinco" data-parent="#accordion">
+                <div class="card-body">
+                    /api/whisky//updateWhisky/             </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingseis">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseseis" aria-expanded="false" aria-controls="collapseseis">
+                        >Delete
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseseis" class="collapse" aria-labelledby="headingseis" data-parent="#accordion">
+                <div class="card-body">
+                    /api/whisky/deleteWhisky/{id}           </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- List group -->
+    <div class="list-group" id="myList" role="tablist">
+        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">GET</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab"> GET by id</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">ADD ELEMENT </a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">ADD LIST ELEMENT</a>
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings2" role="tab">UpdateT</a>
+
+        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings3" role="tab">Delete</a>
+
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel">/api/whisky/all</div>
+        <div class="tab-pane" id="profile" role="tabpanel">/api/whisky/{ID}</div>
+        <div class="tab-pane" id="messages" role="tabpanel">/api/whisky/addWhisky</div>
+        <div class="tab-pane" id="settings" role="tabpanel">/api/whisky/addListWhiskys</div>
+        <div class="tab-pane" id="settings2" role="tabpanel">/api/whisky//updateWhisky/</div>
+        <div class="tab-pane" id="settings3" role="tabpanel">/api/whisky/deleteWhisky/{id}</div>
+
+    </div>
+
+</div>
+<script>
+    $('#myList a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</body>
+</html>
